@@ -7,8 +7,8 @@ func main() {
 	var (
 		xrayCtl *XrayController
 		cfg     = &BaseConfig{
-			APIAddress: "127.0.0.1",
-			APIPort:    10085,
+			APIAddress: "34.94.216.7",
+			APIPort:    32768,
 		}
 	)
 
