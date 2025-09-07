@@ -51,4 +51,12 @@ func main() {
 	p.GrowUp()
 	fmt.Printf("生日过后，我 %d 岁啦\n", p.Age)
 
+	var student struct {
+		Name string
+		Age  int
+	}
+	student.Name = "tom"
+	student.Age = 18
+	fmt.Println("我是匿名结构体对象 student，我的两个属性值为：", student.Name, student.Age)
+
 }

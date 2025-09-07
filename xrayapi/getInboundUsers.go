@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"github.com/xtls/xray-core/app/proxyman/command"
 )
 
@@ -18,4 +19,30 @@ func getInboundUsers(client command.HandlerServiceClient) (users *command.GetInb
 	})
 
 	return
+}
+
+func main_getUsers() {
+	// 先指定 API 端口和地址
+	var (
+		xrayCtl *XrayController
+		cfg     = &BaseConfig{
+			APIAddress: "34.94.216.7",
+			APIPort:    32768,
+		}
+	)
+
+	xrayCtl = new(XrayController)
+	err := xrayCtl.Init(cfg)
+	defer xrayCtl.CmdConn.Close()
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	// 获取用户信息
+	fmt.Println("获取用户信息：")
+	users, err := getInboundUsers(xrayCtl.HsClient)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(users)
 }
