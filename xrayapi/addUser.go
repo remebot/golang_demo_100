@@ -11,7 +11,7 @@ import (
 	"github.com/xtls/xray-core/proxy/vmess"
 )
 
-func main() {
+func main_2() {
 	var (
 		xrayCtl *XrayController
 		cfg     = &BaseConfig{
