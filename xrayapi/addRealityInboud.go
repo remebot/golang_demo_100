@@ -21,22 +21,22 @@ import (
 )
 
 // 添加一个 VLESS-Vision-REALITY 入站（保留的默认实现）
-func addVlessRealityInbound(client command.HandlerServiceClient) error {
-	p := RealityInboundParams{
-		Tag:         "VLESS-Vision-REALITY",
-		Port:        443,
-		ListenAnyIP: true,
-		UserUUID:    "b8eb278f-8685-4a7a-a7ab-3cad172c230a",
-		UserEmail:   "vless@xray",
-		UserFlow:    "xtls-rprx-vision",
-		Dest:        "dl.google.com:443",
-		ServerNames: []string{"dl.google.com"},
-		ShowReality: false,
-		// PrivateKey/ShortIds 留空则自动生成
-	}
-	_, _, _, err := addVlessRealityInboundWithParams(client, p)
-	return err
-}
+// func addVlessRealityInbound(client command.HandlerServiceClient) error {
+// 	p := RealityInboundParams{
+// 		Tag:         "VLESS-Vision-REALITY",
+// 		Port:        443,
+// 		ListenAnyIP: true,
+// 		UserUUID:    "b8eb278f-8685-4a7a-a7ab-3cad172c230a",
+// 		UserEmail:   "vless@xray",
+// 		UserFlow:    "xtls-rprx-vision",
+// 		Dest:        "dl.google.com:443",
+// 		ServerNames: []string{"dl.google.com"},
+// 		ShowReality: false,
+// 		// PrivateKey/ShortIds 留空则自动生成
+// 	}
+// 	_, _, _, err := addVlessRealityInboundWithParams(client, p)
+// 	return err
+// }
 
 // 参数结构体：用于参数化创建 VLESS-Vision-REALITY 入站
 type RealityInboundParams struct {

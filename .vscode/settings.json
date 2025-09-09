@@ -1,0 +1,4 @@
+{
+    "go.terminal.activateEnvironment": false,
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe"
+}
