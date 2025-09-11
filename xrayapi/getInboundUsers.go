@@ -21,7 +21,7 @@ func getInboundUsers(client command.HandlerServiceClient) (users *command.GetInb
 	return
 }
 
-func main_getUsers() {
+func main() {
 	// 先指定 API 端口和地址
 	var (
 		xrayCtl *XrayController

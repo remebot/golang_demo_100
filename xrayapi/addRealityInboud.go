@@ -222,7 +222,7 @@ func addVlessRealityInboundWithParams(client command.HandlerServiceClient, p Rea
 // 注意：此 main 仅用于本地测试 API 是否可调用
 // 运行该文件会尝试通过 gRPC 调用正在运行的 Xray 实例的 API
 // 请先确保 Xray 已启用 API 并监听到对应地址与端口
-func main() {
+func main_addRealityInboud() {
 	var (
 		xrayCtl *XrayController
 		cfg     = &BaseConfig{
