@@ -49,7 +49,6 @@ func addInbound(client command.HandlerServiceClient) error {
 						"HTTP",
 						"DomainSocket"
 						使用时请一律小写
-
 					*/
 					ProtocolName: "websocket",
 					TransportSettings: []*internet.TransportConfig{
