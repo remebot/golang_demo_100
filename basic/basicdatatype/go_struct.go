@@ -27,7 +27,7 @@ func (p *Person) GrowUp() {
 	p.Age += 1
 }
 
-func main() {
+func main_struct() {
 	p := Person{
 		Name:    "Bob",
 		Age:     20,
